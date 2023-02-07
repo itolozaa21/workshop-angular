@@ -1,0 +1,52 @@
+
+<h4>LISTADO DE USUARIO</h4>
+<div>
+    <label for="">Buscador :</label>
+    <input type="text" name="search" [(ngModel)]="search">
+    <button (click)="buscar()">Buscar</button>
+</div>
+<br>
+<br>
+<div *ngFor="let usuario of usuarios " >
+    <label for="">
+        Usuario : {{usuario.usuario}}
+    </label><br>
+    <label for="">
+        Edad : {{usuario.edad}}
+    </label><br>
+    <label for="">
+        Nombre : {{usuario.nombre}}
+    </label><br>
+    <label for="">
+        Correo : {{usuario.correo}}
+    </label>
+    <button (click)="eliminar(usuario.usuario)">Eliminar</button>
+    <br>
+    
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<br>
+<form >
+    <h4>FORMULARIO</h4>
+    <div>
+        <label for="">Correo :</label>
+        <input type="text" name="correo" [(ngModel)]="usuario.correo">
+    </div>
+    <div>
+        <label for="">Nombre :</label>
+        <input type="text" name="nombre" [(ngModel)]="usuario.nombre">
+    </div>
+    <div>
+        <label for="">Edad :</label>
+        <input type="text" name="edad" [(ngModel)]="usuario.edad">
+    </div>
+    <div>
+        <label for="">Usuario :</label>
+        <input type="text" name="usuario" [(ngModel)]="usuario.usuario">
+    </div>
+    <button (click)="guardar()">Guardar</button>
+</form>
+
